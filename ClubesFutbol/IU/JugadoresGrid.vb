@@ -4,6 +4,17 @@
 
         DataGridView1.DataSource = jugadores_list
 
+        'Fuente de datos la coleccion carreras_list.
+        ToolStripComboBox1.ComboBox.DataSource = equipos_list
+        'El miembro a mostrar de la lista es Carrera.
+        ToolStripComboBox1.ComboBox.DisplayMember = "Nombre"
+        'El miembro de valor es siempre el id.
+        ToolStripComboBox1.ComboBox.ValueMember = "Id"
+        'Como no tenemos que valor seleccionar dejo el primero.
+        'ToolStripComboBox1.ComboBox.SelectedValue = 1
+
+
+
         Me.Text = "Jugadores"
 
     End Sub
@@ -60,8 +71,23 @@
 
     End Sub
     Private Sub JugadoresGrid_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+
         MenuForm.ToolStrip1.Enabled = True
 
         Me.Dispose()
+
+    End Sub
+
+    Private Sub Filtrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Filtrar.Click
+
+        'Obtiene el IdCarrera seleccionando en el Combobox1.
+        Dim IdEquipo As Integer = CInt(ToolStripComboBox1.ComboBox.SelectedValue)
+
+        '    'No pude aplicar filtro al bindingsource asi que lo recargue filtrado de mesas_list.
+        DataGridView1.DataSource = jugadores_list.TraerJugadores(IdEquipo)
+
+        '    'Quita la seleccion del contenido del Combobox
+        ToolStripComboBox1.SelectionLength = 0
+
     End Sub
 End Class

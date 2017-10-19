@@ -70,6 +70,29 @@ Public Class JugadoresCollection
 
     End Function
 
+    Public Function TraerJugadores(ByVal IdEquipo As Integer) As JugadoresCollection
+
+        Dim jugadores_filtro As New JugadoresCollection
+        'Necesito hacer esto porque no se crea vacio ya que el New carga la lista automaticamente desde la tabla.
+        jugadores_filtro.ClearItems()
+
+        'En este caso lo cargamos de jugadores_list filtrado
+        For Each jugador In jugadores_list
+
+            'Solamente agrega (Add) el jugador para el equipo indicado indicada en IdEquipo.
+
+            If jugador.IdEquipo = IdEquipo Then
+
+                jugadores_filtro.Add(jugador)
+
+            End If
+
+        Next
+
+        Return jugadores_filtro
+
+    End Function
+
     Public Sub InsertarJugador(ByVal MiJugador As JugadorClass)
 
 
