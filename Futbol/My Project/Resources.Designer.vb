@@ -102,6 +102,13 @@ Namespace My.Resources
             End Get
         End Property
         
+        Friend ReadOnly Property futboll() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("futboll", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         Friend ReadOnly Property jugador() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("jugador", resourceCulture)

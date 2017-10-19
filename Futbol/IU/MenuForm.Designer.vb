@@ -35,7 +35,7 @@ Partial Class MenuForm
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Jugadores, Me.Equipos, Me.Salir})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(589, 47)
+        Me.ToolStrip1.Size = New System.Drawing.Size(672, 47)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -68,12 +68,16 @@ Partial Class MenuForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(589, 324)
+        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.BackgroundImage = Global.Futbol.My.Resources.Resources.futboll
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(672, 328)
         Me.Controls.Add(Me.ToolStrip1)
         Me.IsMdiContainer = True
         Me.Name = "MenuForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MenuForm"
+        Me.TransparencyKey = System.Drawing.Color.Transparent
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)

@@ -34,4 +34,5 @@ Public Class MenuForm
         End
 
     End Sub
+
 End Class
