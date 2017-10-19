@@ -29,10 +29,10 @@ Partial Class EquiposGrid
         Me.Eliminar = New System.Windows.Forms.ToolStripButton
         Me.Salir = New System.Windows.Forms.ToolStripButton
         Me.DataGridView1 = New System.Windows.Forms.DataGridView
+        Me.EquipoClassBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.Localidad = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.EquipoClassBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EquipoClassBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -40,7 +40,7 @@ Partial Class EquiposGrid
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ToolStrip1.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(30, 30)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Agregar, Me.Modificar, Me.Eliminar, Me.Salir})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
@@ -54,7 +54,7 @@ Partial Class EquiposGrid
         Me.Agregar.Image = Global.Futbol.My.Resources.Resources.agregar
         Me.Agregar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Agregar.Name = "Agregar"
-        Me.Agregar.Size = New System.Drawing.Size(83, 34)
+        Me.Agregar.Size = New System.Drawing.Size(80, 34)
         Me.Agregar.Text = "Agregar"
         '
         'Modificar
@@ -62,7 +62,7 @@ Partial Class EquiposGrid
         Me.Modificar.Image = Global.Futbol.My.Resources.Resources.Actualizar__1_
         Me.Modificar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Modificar.Name = "Modificar"
-        Me.Modificar.Size = New System.Drawing.Size(92, 34)
+        Me.Modificar.Size = New System.Drawing.Size(84, 34)
         Me.Modificar.Text = "Modificar"
         '
         'Eliminar
@@ -70,7 +70,7 @@ Partial Class EquiposGrid
         Me.Eliminar.Image = Global.Futbol.My.Resources.Resources.eliminar
         Me.Eliminar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Eliminar.Name = "Eliminar"
-        Me.Eliminar.Size = New System.Drawing.Size(84, 34)
+        Me.Eliminar.Size = New System.Drawing.Size(77, 34)
         Me.Eliminar.Text = "Eliminar"
         '
         'Salir
@@ -79,7 +79,7 @@ Partial Class EquiposGrid
         Me.Salir.Image = Global.Futbol.My.Resources.Resources.salir
         Me.Salir.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Salir.Name = "Salir"
-        Me.Salir.Size = New System.Drawing.Size(63, 34)
+        Me.Salir.Size = New System.Drawing.Size(61, 34)
         Me.Salir.Text = "Salir"
         '
         'DataGridView1
@@ -100,12 +100,17 @@ Partial Class EquiposGrid
         Me.DataGridView1.Size = New System.Drawing.Size(460, 246)
         Me.DataGridView1.TabIndex = 1
         '
+        'EquipoClassBindingSource
+        '
+        Me.EquipoClassBindingSource.DataSource = GetType(Futbol.EquipoClass)
+        '
         'Id
         '
         Me.Id.DataPropertyName = "Id"
         Me.Id.HeaderText = "Id"
         Me.Id.Name = "Id"
         Me.Id.ReadOnly = True
+        Me.Id.Visible = False
         '
         'Nombre
         '
@@ -120,10 +125,6 @@ Partial Class EquiposGrid
         Me.Localidad.HeaderText = "Localidad"
         Me.Localidad.Name = "Localidad"
         Me.Localidad.ReadOnly = True
-        '
-        'EquipoClassBindingSource
-        '
-        Me.EquipoClassBindingSource.DataSource = GetType(Futbol.EquipoClass)
         '
         'EquiposGrid
         '
@@ -149,8 +150,8 @@ Partial Class EquiposGrid
     Friend WithEvents Modificar As System.Windows.Forms.ToolStripButton
     Friend WithEvents Eliminar As System.Windows.Forms.ToolStripButton
     Friend WithEvents Salir As System.Windows.Forms.ToolStripButton
+    Friend WithEvents EquipoClassBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents Id As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Nombre As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Localidad As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents EquipoClassBindingSource As System.Windows.Forms.BindingSource
 End Class

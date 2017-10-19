@@ -22,21 +22,30 @@ Partial Class JugadoresGrid
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView
-        Me.ToolStripComboBox1 = New System.Windows.Forms.ToolStripComboBox
         Me.Agregar = New System.Windows.Forms.ToolStripButton
         Me.Modificar = New System.Windows.Forms.ToolStripButton
         Me.Eliminar = New System.Windows.Forms.ToolStripButton
         Me.Salir = New System.Windows.Forms.ToolStripButton
         Me.Filtrar = New System.Windows.Forms.ToolStripButton
+        Me.ToolStripComboBox1 = New System.Windows.Forms.ToolStripComboBox
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView
+        Me.JugadorClassBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DNI = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.IdEquipo = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.FechaNac = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DetalleEq = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.JugadorClassBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ToolStrip1.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(30, 30)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Agregar, Me.Modificar, Me.Eliminar, Me.Salir, Me.Filtrar, Me.ToolStripComboBox1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
@@ -45,11 +54,62 @@ Partial Class JugadoresGrid
         Me.ToolStrip1.TabIndex = 0
         Me.ToolStrip1.Text = "ToolStrip1"
         '
+        'Agregar
+        '
+        Me.Agregar.Image = Global.Futbol.My.Resources.Resources.agregar
+        Me.Agregar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Agregar.Name = "Agregar"
+        Me.Agregar.Size = New System.Drawing.Size(80, 34)
+        Me.Agregar.Text = "Agregar"
+        '
+        'Modificar
+        '
+        Me.Modificar.Image = Global.Futbol.My.Resources.Resources.Actualizar__1_
+        Me.Modificar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Modificar.Name = "Modificar"
+        Me.Modificar.Size = New System.Drawing.Size(84, 34)
+        Me.Modificar.Text = "Modificar"
+        '
+        'Eliminar
+        '
+        Me.Eliminar.Image = Global.Futbol.My.Resources.Resources.eliminar
+        Me.Eliminar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Eliminar.Name = "Eliminar"
+        Me.Eliminar.Size = New System.Drawing.Size(77, 34)
+        Me.Eliminar.Text = "Eliminar"
+        '
+        'Salir
+        '
+        Me.Salir.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.Salir.Image = Global.Futbol.My.Resources.Resources.salir
+        Me.Salir.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Salir.Name = "Salir"
+        Me.Salir.Size = New System.Drawing.Size(61, 34)
+        Me.Salir.Text = "Salir"
+        '
+        'Filtrar
+        '
+        Me.Filtrar.Image = Global.Futbol.My.Resources.Resources.filtro
+        Me.Filtrar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Filtrar.Name = "Filtrar"
+        Me.Filtrar.Size = New System.Drawing.Size(69, 34)
+        Me.Filtrar.Text = "Filtrar"
+        '
+        'ToolStripComboBox1
+        '
+        Me.ToolStripComboBox1.BackColor = System.Drawing.SystemColors.Menu
+        Me.ToolStripComboBox1.Name = "ToolStripComboBox1"
+        Me.ToolStripComboBox1.Size = New System.Drawing.Size(121, 37)
+        '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.DNI, Me.IdEquipo, Me.Nombre, Me.FechaNac, Me.DetalleEq})
+        Me.DataGridView1.DataSource = Me.JugadorClassBindingSource
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(0, 37)
         Me.DataGridView1.MultiSelect = False
@@ -59,51 +119,53 @@ Partial Class JugadoresGrid
         Me.DataGridView1.Size = New System.Drawing.Size(536, 240)
         Me.DataGridView1.TabIndex = 1
         '
-        'ToolStripComboBox1
+        'JugadorClassBindingSource
         '
-        Me.ToolStripComboBox1.Name = "ToolStripComboBox1"
-        Me.ToolStripComboBox1.Size = New System.Drawing.Size(121, 37)
+        Me.JugadorClassBindingSource.DataSource = GetType(Futbol.JugadorClass)
         '
-        'Agregar
+        'Id
         '
-        Me.Agregar.Image = Global.Futbol.My.Resources.Resources.agregar
-        Me.Agregar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Agregar.Name = "Agregar"
-        Me.Agregar.Size = New System.Drawing.Size(83, 34)
-        Me.Agregar.Text = "Agregar"
+        Me.Id.DataPropertyName = "Id"
+        Me.Id.HeaderText = "Id"
+        Me.Id.Name = "Id"
+        Me.Id.ReadOnly = True
+        Me.Id.Visible = False
         '
-        'Modificar
+        'DNI
         '
-        Me.Modificar.Image = Global.Futbol.My.Resources.Resources.Actualizar__1_
-        Me.Modificar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Modificar.Name = "Modificar"
-        Me.Modificar.Size = New System.Drawing.Size(92, 34)
-        Me.Modificar.Text = "Modificar"
+        Me.DNI.DataPropertyName = "DNI"
+        Me.DNI.HeaderText = "DNI"
+        Me.DNI.Name = "DNI"
+        Me.DNI.ReadOnly = True
         '
-        'Eliminar
+        'IdEquipo
         '
-        Me.Eliminar.Image = Global.Futbol.My.Resources.Resources.eliminar
-        Me.Eliminar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Eliminar.Name = "Eliminar"
-        Me.Eliminar.Size = New System.Drawing.Size(84, 34)
-        Me.Eliminar.Text = "Eliminar"
+        Me.IdEquipo.DataPropertyName = "IdEquipo"
+        Me.IdEquipo.HeaderText = "IdEquipo"
+        Me.IdEquipo.Name = "IdEquipo"
+        Me.IdEquipo.ReadOnly = True
+        Me.IdEquipo.Visible = False
         '
-        'Salir
+        'Nombre
         '
-        Me.Salir.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.Salir.Image = Global.Futbol.My.Resources.Resources.salir
-        Me.Salir.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Salir.Name = "Salir"
-        Me.Salir.Size = New System.Drawing.Size(63, 34)
-        Me.Salir.Text = "Salir"
+        Me.Nombre.DataPropertyName = "Nombre"
+        Me.Nombre.HeaderText = "Nombre"
+        Me.Nombre.Name = "Nombre"
+        Me.Nombre.ReadOnly = True
         '
-        'Filtrar
+        'FechaNac
         '
-        Me.Filtrar.Image = Global.Futbol.My.Resources.Resources.filtro
-        Me.Filtrar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Filtrar.Name = "Filtrar"
-        Me.Filtrar.Size = New System.Drawing.Size(71, 34)
-        Me.Filtrar.Text = "Filtrar"
+        Me.FechaNac.DataPropertyName = "FechaNac"
+        Me.FechaNac.HeaderText = "FechaNac"
+        Me.FechaNac.Name = "FechaNac"
+        Me.FechaNac.ReadOnly = True
+        '
+        'DetalleEq
+        '
+        Me.DetalleEq.DataPropertyName = "DetalleEq"
+        Me.DetalleEq.HeaderText = "DetalleEq"
+        Me.DetalleEq.Name = "DetalleEq"
+        Me.DetalleEq.ReadOnly = True
         '
         'JugadoresGrid
         '
@@ -118,6 +180,7 @@ Partial Class JugadoresGrid
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.JugadorClassBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -130,4 +193,11 @@ Partial Class JugadoresGrid
     Friend WithEvents Salir As System.Windows.Forms.ToolStripButton
     Friend WithEvents Filtrar As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripComboBox1 As System.Windows.Forms.ToolStripComboBox
+    Friend WithEvents JugadorClassBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Id As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DNI As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents IdEquipo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Nombre As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents FechaNac As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DetalleEq As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

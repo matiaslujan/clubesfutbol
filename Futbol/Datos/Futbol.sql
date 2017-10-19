@@ -1,7 +1,12 @@
-Create database Futbol 
+IF DB_ID('Futbol') IS NULL
 
-use Futbol
+Create database Futbol;
 
+go 
+
+use Futbol;
+
+if OBJECT_ID ('Equipos') is null
 create table Equipos
 (
 Id int Identity(1,1),
@@ -10,6 +15,7 @@ Localidad nvarchar (50) not null
 constraint PK_Equipos_Id Primary key (Id)
 );
 
+if object_id ('Jugadores') is null
 create table Jugadores
 (
 Id int Identity(1,1),
