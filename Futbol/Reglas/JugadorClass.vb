@@ -74,14 +74,14 @@ Public Class JugadorClass
 
     End Property
 
-    Private FechaNac_ As Date
+    Private FechaNac_ As DateTime
 
-    Public Property FechaNac() As Date
+    Public Property FechaNac() As DateTime
         Get
             Return FechaNac_
 
         End Get
-        Set(ByVal value As Date)
+        Set(ByVal value As DateTime)
             FechaNac_ = value
 
         End Set

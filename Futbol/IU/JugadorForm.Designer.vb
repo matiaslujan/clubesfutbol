@@ -73,6 +73,7 @@ Partial Class JugadorForm
         '
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox4.Location = New System.Drawing.Point(193, 139)
+        Me.TextBox4.MaxLength = 10
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(157, 21)
         Me.TextBox4.TabIndex = 20
@@ -81,6 +82,7 @@ Partial Class JugadorForm
         '
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox3.Location = New System.Drawing.Point(193, 108)
+        Me.TextBox3.MaxLength = 8
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(157, 21)
         Me.TextBox3.TabIndex = 19

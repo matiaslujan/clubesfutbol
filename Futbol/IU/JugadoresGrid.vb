@@ -2,7 +2,7 @@
 
     Private Sub JugadoresGrid_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        DataGridView1.DataSource = jugadores_list
+        'DataGridView1.DataSource = jugadores_list
 
         'Fuente de datos la coleccion carreras_list.
         ToolStripComboBox1.ComboBox.DataSource = equipos_list
@@ -25,6 +25,8 @@
 
         JugadorForm.Text = "Agregar jugador"
 
+        JugadorForm.combo = ToolStripComboBox1.ComboBox.SelectedValue
+
         JugadorForm.Show()
 
     End Sub
@@ -36,7 +38,7 @@
 
         JugadorForm.TextBox3.Text = DataGridView1.CurrentRow.Cells("DNI").Value.ToString
 
-        JugadorForm.TextBox4.Text = DataGridView1.CurrentRow.Cells("FechaNac").Value.ToString
+        JugadorForm.TextBox4.Text = CDate(DataGridView1.CurrentRow.Cells("FechaNac").Value.ToString)
 
         JugadorForm.combo = CInt(DataGridView1.CurrentRow.Cells("IdEquipo").Value.ToString)
     End Sub

@@ -92,5 +92,59 @@
 
     End Sub
 
+    'textbox DNI
+    Private Sub TextBox3_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox3.KeyPress
+
+        If Not Char.IsNumber(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+
+            e.Handled = True
+
+        End If
+
+
+    End Sub
+
+    'textbox FechaNac
+
+    Private Sub TextBox4_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox4.KeyPress
+
+        If Not Char.IsNumber(e.KeyChar) And Not Char.IsControl(e.KeyChar) And Not e.KeyChar = "/" And Not e.KeyChar = "." And Not e.KeyChar = "," And Not e.KeyChar = "-" Then
+
+            e.Handled = True
+
+        End If
+
+        Dim pos As Integer = TextBox4.SelectionStart
+
+        If e.KeyChar = "." Or e.KeyChar = "," Or e.KeyChar = "-" Then
+
+            e.Handled = True
+
+            SendKeys.Send("/")
+
+        End If
+
+        If e.KeyChar = "/" Then
+
+            If pos <> 2 And pos <> 5 Then
+
+                e.Handled = True
+
+            End If
+
+        End If
+
+        If Char.IsNumber(e.KeyChar) Then
+
+            If (pos = 2 Or pos = 5) Then
+
+                e.Handled = True
+
+            End If
+
+        End If
+
+    End Sub
+
 
 End Class

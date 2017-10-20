@@ -9,6 +9,7 @@ Public Class JugadoresCollection
     Protected Overrides Sub OnAddingNew(ByVal e As System.ComponentModel.AddingNewEventArgs)
 
         MyBase.OnAddingNew(e)
+
         e.NewObject = New JugadorClass
 
     End Sub
@@ -60,7 +61,7 @@ Public Class JugadoresCollection
             MiJugador.Nombre = CStr(dr("Nombre"))
             MiJugador.DNI = CInt(dr("DNI"))
             MiJugador.IdEquipo = CInt(dr("IdEquipo"))
-            MiJugador.FechaNac = CDate(dr("FechaNac"))
+            MiJugador.FechaNac = CDate(Format(CDate(dr("FechaNac")), "dd/MM/yyyy"))
 
             Me.Add(Mijugador)
 
