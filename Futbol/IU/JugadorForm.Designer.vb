@@ -34,6 +34,7 @@ Partial Class JugadorForm
         Me.Label3 = New System.Windows.Forms.Label
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label1 = New System.Windows.Forms.Label
+        Me.LabelFecha = New System.Windows.Forms.Label
         Me.SuspendLayout()
         '
         'Cancelar
@@ -44,7 +45,7 @@ Partial Class JugadorForm
         Me.Cancelar.Location = New System.Drawing.Point(242, 228)
         Me.Cancelar.Name = "Cancelar"
         Me.Cancelar.Size = New System.Drawing.Size(83, 32)
-        Me.Cancelar.TabIndex = 23
+        Me.Cancelar.TabIndex = 5
         Me.Cancelar.Text = "Cancelar"
         Me.Cancelar.UseVisualStyleBackColor = False
         '
@@ -56,7 +57,7 @@ Partial Class JugadorForm
         Me.Aceptar.Location = New System.Drawing.Point(66, 228)
         Me.Aceptar.Name = "Aceptar"
         Me.Aceptar.Size = New System.Drawing.Size(83, 32)
-        Me.Aceptar.TabIndex = 22
+        Me.Aceptar.TabIndex = 4
         Me.Aceptar.Text = "Aceptar"
         Me.Aceptar.UseVisualStyleBackColor = False
         '
@@ -67,42 +68,43 @@ Partial Class JugadorForm
         Me.ComboBox1.Location = New System.Drawing.Point(193, 179)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(157, 23)
-        Me.ComboBox1.TabIndex = 21
+        Me.ComboBox1.TabIndex = 3
         '
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(193, 139)
+        Me.TextBox4.Location = New System.Drawing.Point(193, 133)
         Me.TextBox4.MaxLength = 10
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(157, 21)
-        Me.TextBox4.TabIndex = 20
+        Me.TextBox4.TabIndex = 2
         '
         'TextBox3
         '
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(193, 108)
+        Me.TextBox3.Location = New System.Drawing.Point(193, 102)
         Me.TextBox3.MaxLength = 8
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(157, 21)
-        Me.TextBox3.TabIndex = 19
+        Me.TextBox3.TabIndex = 1
         '
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(193, 76)
+        Me.TextBox2.Location = New System.Drawing.Point(193, 70)
+        Me.TextBox2.MaxLength = 50
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(157, 21)
-        Me.TextBox2.TabIndex = 18
+        Me.TextBox2.TabIndex = 0
         '
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(193, 44)
+        Me.TextBox1.Location = New System.Drawing.Point(193, 38)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
         Me.TextBox1.Size = New System.Drawing.Size(157, 21)
-        Me.TextBox1.TabIndex = 17
+        Me.TextBox1.TabIndex = 9
         '
         'Label5
         '
@@ -120,7 +122,7 @@ Partial Class JugadorForm
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(29, 142)
+        Me.Label4.Location = New System.Drawing.Point(29, 136)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(105, 16)
         Me.Label4.TabIndex = 15
@@ -131,7 +133,7 @@ Partial Class JugadorForm
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(29, 113)
+        Me.Label3.Location = New System.Drawing.Point(29, 107)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(34, 16)
         Me.Label3.TabIndex = 14
@@ -142,7 +144,7 @@ Partial Class JugadorForm
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(29, 81)
+        Me.Label2.Location = New System.Drawing.Point(29, 75)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(137, 16)
         Me.Label2.TabIndex = 13
@@ -153,11 +155,22 @@ Partial Class JugadorForm
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(29, 48)
+        Me.Label1.Location = New System.Drawing.Point(29, 42)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(21, 16)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Id"
+        '
+        'LabelFecha
+        '
+        Me.LabelFecha.AutoSize = True
+        Me.LabelFecha.BackColor = System.Drawing.Color.Transparent
+        Me.LabelFecha.Location = New System.Drawing.Point(190, 157)
+        Me.LabelFecha.Name = "LabelFecha"
+        Me.LabelFecha.Size = New System.Drawing.Size(39, 13)
+        Me.LabelFecha.TabIndex = 24
+        Me.LabelFecha.Text = "Label6"
+        Me.LabelFecha.Visible = False
         '
         'JugadorForm
         '
@@ -166,6 +179,7 @@ Partial Class JugadorForm
         Me.BackgroundImage = Global.Futbol.My.Resources.Resources.jugador1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(389, 272)
+        Me.Controls.Add(Me.LabelFecha)
         Me.Controls.Add(Me.Cancelar)
         Me.Controls.Add(Me.Aceptar)
         Me.Controls.Add(Me.ComboBox1)
@@ -197,4 +211,5 @@ Partial Class JugadorForm
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents LabelFecha As System.Windows.Forms.Label
 End Class

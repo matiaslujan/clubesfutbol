@@ -43,6 +43,15 @@
         JugadorForm.combo = CInt(DataGridView1.CurrentRow.Cells("IdEquipo").Value.ToString)
     End Sub
     Private Sub Modificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Modificar.Click
+        'Evento que responde al click del botón modificar
+
+        If DataGridView1.SelectedRows.Count = 0 Then
+
+            MessageBox.Show("Seleccione un jugador para modificar")
+
+            Exit Sub
+
+        End If
 
         JugadorForm.operacion = "Modificar"
 
@@ -54,7 +63,14 @@
     End Sub
 
     Private Sub Eliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Eliminar.Click
+        'Evento que responde al click del botón eliminar
+        If DataGridView1.SelectedRows.Count = 0 Then
 
+            MessageBox.Show("Seleccione un jugador para eliminar")
+
+            Exit Sub
+
+        End If
         JugadorForm.operacion = "Eliminar"
 
         JugadorForm.Text = "Eliminar jugador"
