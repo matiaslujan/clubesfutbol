@@ -15,6 +15,14 @@ Localidad nvarchar (50) not null
 constraint PK_Equipos_Id Primary key (Id)
 );
 
+if object_id('Categorias') is null 
+create table Categorias
+(
+Id int Identity(1,1),
+Categoria nvarchar (50) not null,
+constraint PK_Categorias_Id primary key (Id)
+);
+
 if object_id ('Jugadores') is null
 create table Jugadores
 (
@@ -27,10 +35,3 @@ IdCategoria int Foreign key references Categorias(Id) not null,
 constraint PK_Jugadores_Id primary key (Id)
 );
 
-if object_id('Categorias') is null 
-create table Categorias
-(
-Id int Identity(1,1),
-Categoria nvarchar (50) not null,
-constraint PK_Categorias_Id primary key (Id)
-);
