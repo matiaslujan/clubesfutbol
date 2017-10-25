@@ -44,7 +44,7 @@ Partial Class JugadorForm
         Me.Cancelar.BackColor = System.Drawing.Color.LimeGreen
         Me.Cancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Cancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Cancelar.Location = New System.Drawing.Point(242, 264)
+        Me.Cancelar.Location = New System.Drawing.Point(267, 264)
         Me.Cancelar.Name = "Cancelar"
         Me.Cancelar.Size = New System.Drawing.Size(83, 32)
         Me.Cancelar.TabIndex = 5
@@ -56,7 +56,7 @@ Partial Class JugadorForm
         Me.Aceptar.BackColor = System.Drawing.Color.LimeGreen
         Me.Aceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Aceptar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Aceptar.Location = New System.Drawing.Point(51, 264)
+        Me.Aceptar.Location = New System.Drawing.Point(83, 264)
         Me.Aceptar.Name = "Aceptar"
         Me.Aceptar.Size = New System.Drawing.Size(83, 32)
         Me.Aceptar.TabIndex = 4
@@ -200,7 +200,7 @@ Partial Class JugadorForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Futbol.My.Resources.Resources.jugador1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(518, 335)
+        Me.ClientSize = New System.Drawing.Size(441, 313)
         Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.LabelFecha)
