@@ -22,7 +22,6 @@ Partial Class MenuForm
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MenuForm))
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip
         Me.Jugadores = New System.Windows.Forms.ToolStripButton
         Me.Equipos = New System.Windows.Forms.ToolStripButton
@@ -68,7 +67,7 @@ Partial Class MenuForm
         '
         'Categorias
         '
-        Me.Categorias.Image = CType(resources.GetObject("Categorias.Image"), System.Drawing.Image)
+        Me.Categorias.Image = Global.Futbol.My.Resources.Resources.categoria
         Me.Categorias.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Categorias.Name = "Categorias"
         Me.Categorias.Size = New System.Drawing.Size(103, 44)

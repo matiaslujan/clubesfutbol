@@ -24,11 +24,6 @@ Partial Class JugadoresGrid
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip
-        Me.Agregar = New System.Windows.Forms.ToolStripButton
-        Me.Modificar = New System.Windows.Forms.ToolStripButton
-        Me.Eliminar = New System.Windows.Forms.ToolStripButton
-        Me.Salir = New System.Windows.Forms.ToolStripButton
-        Me.Filtrar = New System.Windows.Forms.ToolStripButton
         Me.ToolStripComboBox1 = New System.Windows.Forms.ToolStripComboBox
         Me.ToolStripComboBox2 = New System.Windows.Forms.ToolStripComboBox
         Me.DataGridView1 = New System.Windows.Forms.DataGridView
@@ -41,6 +36,11 @@ Partial Class JugadoresGrid
         Me.FechaNac = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DetalleEq = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.JugadorClassBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Agregar = New System.Windows.Forms.ToolStripButton
+        Me.Modificar = New System.Windows.Forms.ToolStripButton
+        Me.Eliminar = New System.Windows.Forms.ToolStripButton
+        Me.Salir = New System.Windows.Forms.ToolStripButton
+        Me.Filtrar = New System.Windows.Forms.ToolStripButton
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.JugadorClassBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,47 +56,6 @@ Partial Class JugadoresGrid
         Me.ToolStrip1.Size = New System.Drawing.Size(647, 37)
         Me.ToolStrip1.TabIndex = 0
         Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'Agregar
-        '
-        Me.Agregar.Image = Global.Futbol.My.Resources.Resources.agregar
-        Me.Agregar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Agregar.Name = "Agregar"
-        Me.Agregar.Size = New System.Drawing.Size(80, 34)
-        Me.Agregar.Text = "Agregar"
-        '
-        'Modificar
-        '
-        Me.Modificar.Image = Global.Futbol.My.Resources.Resources.Actualizar__1_
-        Me.Modificar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Modificar.Name = "Modificar"
-        Me.Modificar.Size = New System.Drawing.Size(84, 34)
-        Me.Modificar.Text = "Modificar"
-        '
-        'Eliminar
-        '
-        Me.Eliminar.Image = Global.Futbol.My.Resources.Resources.eliminar
-        Me.Eliminar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Eliminar.Name = "Eliminar"
-        Me.Eliminar.Size = New System.Drawing.Size(77, 34)
-        Me.Eliminar.Text = "Eliminar"
-        '
-        'Salir
-        '
-        Me.Salir.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.Salir.Image = Global.Futbol.My.Resources.Resources.salir
-        Me.Salir.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Salir.Name = "Salir"
-        Me.Salir.Size = New System.Drawing.Size(61, 34)
-        Me.Salir.Text = "Salir"
-        '
-        'Filtrar
-        '
-        Me.Filtrar.Image = Global.Futbol.My.Resources.Resources.filtro
-        Me.Filtrar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Filtrar.Name = "Filtrar"
-        Me.Filtrar.Size = New System.Drawing.Size(69, 34)
-        Me.Filtrar.Text = "Filtrar"
         '
         'ToolStripComboBox1
         '
@@ -116,6 +75,7 @@ Partial Class JugadoresGrid
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.GreenYellow
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.IdCategoria, Me.DNI, Me.IdEquipo, Me.Nombre, Me.FechaNac, Me.DetalleEq, Me.DetalleCat})
         Me.DataGridView1.DataSource = Me.JugadorClassBindingSource
@@ -190,6 +150,47 @@ Partial Class JugadoresGrid
         'JugadorClassBindingSource
         '
         Me.JugadorClassBindingSource.DataSource = GetType(Futbol.JugadorClass)
+        '
+        'Agregar
+        '
+        Me.Agregar.Image = Global.Futbol.My.Resources.Resources.agregar
+        Me.Agregar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Agregar.Name = "Agregar"
+        Me.Agregar.Size = New System.Drawing.Size(80, 34)
+        Me.Agregar.Text = "Agregar"
+        '
+        'Modificar
+        '
+        Me.Modificar.Image = Global.Futbol.My.Resources.Resources.Actualizar__1_
+        Me.Modificar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Modificar.Name = "Modificar"
+        Me.Modificar.Size = New System.Drawing.Size(84, 34)
+        Me.Modificar.Text = "Modificar"
+        '
+        'Eliminar
+        '
+        Me.Eliminar.Image = Global.Futbol.My.Resources.Resources.eliminar
+        Me.Eliminar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Eliminar.Name = "Eliminar"
+        Me.Eliminar.Size = New System.Drawing.Size(77, 34)
+        Me.Eliminar.Text = "Eliminar"
+        '
+        'Salir
+        '
+        Me.Salir.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.Salir.Image = Global.Futbol.My.Resources.Resources.salir
+        Me.Salir.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Salir.Name = "Salir"
+        Me.Salir.Size = New System.Drawing.Size(61, 34)
+        Me.Salir.Text = "Salir"
+        '
+        'Filtrar
+        '
+        Me.Filtrar.Image = Global.Futbol.My.Resources.Resources.filtro
+        Me.Filtrar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Filtrar.Name = "Filtrar"
+        Me.Filtrar.Size = New System.Drawing.Size(69, 34)
+        Me.Filtrar.Text = "Filtrar"
         '
         'JugadoresGrid
         '
