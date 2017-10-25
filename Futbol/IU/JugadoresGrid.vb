@@ -2,7 +2,7 @@
 
     Private Sub JugadoresGrid_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        'DataGridView1.DataSource = jugadores_list
+        DataGridView1.DataSource = jugadores_list
 
         'Fuente de datos la coleccion carreras_list.
         ToolStripComboBox1.ComboBox.DataSource = equipos_list
@@ -24,7 +24,7 @@
         ToolStripComboBox2.ComboBox.SelectedValue = 1
 
         Me.Text = "Jugadores"
-
+       
     End Sub
 
     Private Sub Agregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Agregar.Click

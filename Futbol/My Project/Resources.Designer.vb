@@ -74,6 +74,13 @@ Namespace My.Resources
             End Get
         End Property
         
+        Friend ReadOnly Property categ_fondo() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("categ_fondo", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         Friend ReadOnly Property categoria() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("categoria", resourceCulture)

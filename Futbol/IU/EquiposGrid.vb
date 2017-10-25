@@ -30,6 +30,15 @@
     End Sub
     Private Sub Modificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Modificar.Click
 
+
+        If DataGridView1.SelectedRows.Count = 0 Then
+
+            MessageBox.Show("Seleccione un equipo para modificar")
+
+            Exit Sub
+
+        End If
+
         EquipoForm.operacion = "Modificar"
 
         EquipoForm.Text = "Modificar equipo"
@@ -41,6 +50,15 @@
     End Sub
 
     Private Sub Eliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Eliminar.Click
+
+
+        If DataGridView1.SelectedRows.Count = 0 Then
+
+            MessageBox.Show("Seleccione un equipo para eliminar")
+
+            Exit Sub
+
+        End If
 
         EquipoForm.operacion = "Eliminar"
 

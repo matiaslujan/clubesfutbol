@@ -24,23 +24,23 @@ Partial Class JugadoresGrid
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip
-        Me.ToolStripComboBox1 = New System.Windows.Forms.ToolStripComboBox
-        Me.ToolStripComboBox2 = New System.Windows.Forms.ToolStripComboBox
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView
-        Me.IdCategoria = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DetalleCat = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DNI = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.IdEquipo = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.FechaNac = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.DetalleEq = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.JugadorClassBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Agregar = New System.Windows.Forms.ToolStripButton
         Me.Modificar = New System.Windows.Forms.ToolStripButton
         Me.Eliminar = New System.Windows.Forms.ToolStripButton
         Me.Salir = New System.Windows.Forms.ToolStripButton
         Me.Filtrar = New System.Windows.Forms.ToolStripButton
+        Me.ToolStripComboBox1 = New System.Windows.Forms.ToolStripComboBox
+        Me.ToolStripComboBox2 = New System.Windows.Forms.ToolStripComboBox
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView
+        Me.JugadorClassBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.IdCategoria = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DNI = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.IdEquipo = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.FechaNac = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DetalleEq = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DetalleCat = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.JugadorClassBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,100 +56,6 @@ Partial Class JugadoresGrid
         Me.ToolStrip1.Size = New System.Drawing.Size(647, 37)
         Me.ToolStrip1.TabIndex = 0
         Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'ToolStripComboBox1
-        '
-        Me.ToolStripComboBox1.BackColor = System.Drawing.SystemColors.Menu
-        Me.ToolStripComboBox1.Name = "ToolStripComboBox1"
-        Me.ToolStripComboBox1.Size = New System.Drawing.Size(225, 37)
-        '
-        'ToolStripComboBox2
-        '
-        Me.ToolStripComboBox2.BackColor = System.Drawing.SystemColors.Menu
-        Me.ToolStripComboBox2.Name = "ToolStripComboBox2"
-        Me.ToolStripComboBox2.Size = New System.Drawing.Size(121, 21)
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.GreenYellow
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.IdCategoria, Me.DNI, Me.IdEquipo, Me.Nombre, Me.FechaNac, Me.DetalleEq, Me.DetalleCat})
-        Me.DataGridView1.DataSource = Me.JugadorClassBindingSource
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 37)
-        Me.DataGridView1.MultiSelect = False
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(647, 239)
-        Me.DataGridView1.TabIndex = 1
-        '
-        'IdCategoria
-        '
-        Me.IdCategoria.DataPropertyName = "IdCategoria"
-        Me.IdCategoria.HeaderText = "IdCategoria"
-        Me.IdCategoria.Name = "IdCategoria"
-        Me.IdCategoria.ReadOnly = True
-        Me.IdCategoria.Visible = False
-        '
-        'DetalleCat
-        '
-        Me.DetalleCat.DataPropertyName = "DetalleCat"
-        Me.DetalleCat.HeaderText = "DetalleCat"
-        Me.DetalleCat.Name = "DetalleCat"
-        Me.DetalleCat.ReadOnly = True
-        '
-        'Id
-        '
-        Me.Id.DataPropertyName = "Id"
-        Me.Id.HeaderText = "Id"
-        Me.Id.Name = "Id"
-        Me.Id.ReadOnly = True
-        Me.Id.Visible = False
-        '
-        'DNI
-        '
-        Me.DNI.DataPropertyName = "DNI"
-        Me.DNI.HeaderText = "DNI"
-        Me.DNI.Name = "DNI"
-        Me.DNI.ReadOnly = True
-        '
-        'IdEquipo
-        '
-        Me.IdEquipo.DataPropertyName = "IdEquipo"
-        Me.IdEquipo.HeaderText = "IdEquipo"
-        Me.IdEquipo.Name = "IdEquipo"
-        Me.IdEquipo.ReadOnly = True
-        Me.IdEquipo.Visible = False
-        '
-        'Nombre
-        '
-        Me.Nombre.DataPropertyName = "Nombre"
-        Me.Nombre.HeaderText = "Nombre"
-        Me.Nombre.Name = "Nombre"
-        Me.Nombre.ReadOnly = True
-        '
-        'FechaNac
-        '
-        Me.FechaNac.DataPropertyName = "FechaNac"
-        Me.FechaNac.HeaderText = "FechaNac"
-        Me.FechaNac.Name = "FechaNac"
-        Me.FechaNac.ReadOnly = True
-        '
-        'DetalleEq
-        '
-        Me.DetalleEq.DataPropertyName = "DetalleEq"
-        Me.DetalleEq.HeaderText = "DetalleEq"
-        Me.DetalleEq.Name = "DetalleEq"
-        Me.DetalleEq.ReadOnly = True
-        '
-        'JugadorClassBindingSource
-        '
-        Me.JugadorClassBindingSource.DataSource = GetType(Futbol.JugadorClass)
         '
         'Agregar
         '
@@ -191,6 +97,100 @@ Partial Class JugadoresGrid
         Me.Filtrar.Name = "Filtrar"
         Me.Filtrar.Size = New System.Drawing.Size(69, 34)
         Me.Filtrar.Text = "Filtrar"
+        '
+        'ToolStripComboBox1
+        '
+        Me.ToolStripComboBox1.BackColor = System.Drawing.SystemColors.Menu
+        Me.ToolStripComboBox1.Name = "ToolStripComboBox1"
+        Me.ToolStripComboBox1.Size = New System.Drawing.Size(225, 37)
+        '
+        'ToolStripComboBox2
+        '
+        Me.ToolStripComboBox2.BackColor = System.Drawing.SystemColors.Menu
+        Me.ToolStripComboBox2.Name = "ToolStripComboBox2"
+        Me.ToolStripComboBox2.Size = New System.Drawing.Size(121, 21)
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.GreenYellow
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.IdCategoria, Me.DNI, Me.IdEquipo, Me.Nombre, Me.FechaNac, Me.DetalleEq, Me.DetalleCat})
+        Me.DataGridView1.DataSource = Me.JugadorClassBindingSource
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 37)
+        Me.DataGridView1.MultiSelect = False
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView1.Size = New System.Drawing.Size(647, 239)
+        Me.DataGridView1.TabIndex = 1
+        '
+        'JugadorClassBindingSource
+        '
+        Me.JugadorClassBindingSource.DataSource = GetType(Futbol.JugadorClass)
+        '
+        'Id
+        '
+        Me.Id.DataPropertyName = "Id"
+        Me.Id.HeaderText = "Id"
+        Me.Id.Name = "Id"
+        Me.Id.ReadOnly = True
+        Me.Id.Visible = False
+        '
+        'IdCategoria
+        '
+        Me.IdCategoria.DataPropertyName = "IdCategoria"
+        Me.IdCategoria.HeaderText = "IdCategoria"
+        Me.IdCategoria.Name = "IdCategoria"
+        Me.IdCategoria.ReadOnly = True
+        Me.IdCategoria.Visible = False
+        '
+        'DNI
+        '
+        Me.DNI.DataPropertyName = "DNI"
+        Me.DNI.HeaderText = "DNI"
+        Me.DNI.Name = "DNI"
+        Me.DNI.ReadOnly = True
+        '
+        'IdEquipo
+        '
+        Me.IdEquipo.DataPropertyName = "IdEquipo"
+        Me.IdEquipo.HeaderText = "IdEquipo"
+        Me.IdEquipo.Name = "IdEquipo"
+        Me.IdEquipo.ReadOnly = True
+        Me.IdEquipo.Visible = False
+        '
+        'Nombre
+        '
+        Me.Nombre.DataPropertyName = "Nombre"
+        Me.Nombre.HeaderText = "Nombre"
+        Me.Nombre.Name = "Nombre"
+        Me.Nombre.ReadOnly = True
+        '
+        'FechaNac
+        '
+        Me.FechaNac.DataPropertyName = "FechaNac"
+        Me.FechaNac.HeaderText = "FechaNac"
+        Me.FechaNac.Name = "FechaNac"
+        Me.FechaNac.ReadOnly = True
+        '
+        'DetalleEq
+        '
+        Me.DetalleEq.DataPropertyName = "DetalleEq"
+        Me.DetalleEq.HeaderText = "Club"
+        Me.DetalleEq.Name = "DetalleEq"
+        Me.DetalleEq.ReadOnly = True
+        '
+        'DetalleCat
+        '
+        Me.DetalleCat.DataPropertyName = "DetalleCat"
+        Me.DetalleCat.HeaderText = "Categoria"
+        Me.DetalleCat.Name = "DetalleCat"
+        Me.DetalleCat.ReadOnly = True
         '
         'JugadoresGrid
         '

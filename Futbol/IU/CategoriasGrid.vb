@@ -30,6 +30,15 @@
 
     Private Sub Modificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Modificar.Click
 
+
+        If DataGridView1.SelectedRows.Count = 0 Then
+
+            MessageBox.Show("Seleccione un categoria para modificar")
+
+            Exit Sub
+
+        End If
+
         CategoriaForm.operacion = "Modificar"
 
         CategoriaForm.Text = "Modificar Categoria"
@@ -42,6 +51,14 @@
 
 
     Private Sub Eliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Eliminar.Click
+
+        If DataGridView1.SelectedRows.Count = 0 Then
+
+            MessageBox.Show("Seleccione un categoria para eliminar")
+
+            Exit Sub
+
+        End If
 
         CategoriaForm.operacion = "Eliminar"
 
