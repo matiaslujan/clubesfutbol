@@ -22,17 +22,19 @@ Partial Class MenuForm
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MenuForm))
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip
         Me.Jugadores = New System.Windows.Forms.ToolStripButton
         Me.Equipos = New System.Windows.Forms.ToolStripButton
         Me.Salir = New System.Windows.Forms.ToolStripButton
+        Me.Categorias = New System.Windows.Forms.ToolStripButton
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ToolStrip1
         '
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(40, 40)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Jugadores, Me.Equipos, Me.Salir})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Jugadores, Me.Equipos, Me.Salir, Me.Categorias})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(839, 47)
@@ -44,7 +46,7 @@ Partial Class MenuForm
         Me.Jugadores.Image = Global.Futbol.My.Resources.Resources.jugador
         Me.Jugadores.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Jugadores.Name = "Jugadores"
-        Me.Jugadores.Size = New System.Drawing.Size(104, 44)
+        Me.Jugadores.Size = New System.Drawing.Size(101, 44)
         Me.Jugadores.Text = "Jugadores"
         '
         'Equipos
@@ -52,7 +54,7 @@ Partial Class MenuForm
         Me.Equipos.Image = Global.Futbol.My.Resources.Resources.club
         Me.Equipos.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Equipos.Name = "Equipos"
-        Me.Equipos.Size = New System.Drawing.Size(93, 44)
+        Me.Equipos.Size = New System.Drawing.Size(88, 44)
         Me.Equipos.Text = "Equipos"
         '
         'Salir
@@ -61,8 +63,16 @@ Partial Class MenuForm
         Me.Salir.Image = Global.Futbol.My.Resources.Resources.salir
         Me.Salir.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Salir.Name = "Salir"
-        Me.Salir.Size = New System.Drawing.Size(73, 44)
+        Me.Salir.Size = New System.Drawing.Size(71, 44)
         Me.Salir.Text = "Salir"
+        '
+        'Categorias
+        '
+        Me.Categorias.Image = CType(resources.GetObject("Categorias.Image"), System.Drawing.Image)
+        Me.Categorias.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Categorias.Name = "Categorias"
+        Me.Categorias.Size = New System.Drawing.Size(103, 44)
+        Me.Categorias.Text = "Categorias"
         '
         'MenuForm
         '
@@ -88,4 +98,5 @@ Partial Class MenuForm
     Friend WithEvents Jugadores As System.Windows.Forms.ToolStripButton
     Friend WithEvents Equipos As System.Windows.Forms.ToolStripButton
     Friend WithEvents Salir As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Categorias As System.Windows.Forms.ToolStripButton
 End Class

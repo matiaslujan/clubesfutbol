@@ -28,11 +28,23 @@ Public Class MenuForm
 
 
     End Sub
+    Private Sub Categorias_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Categorias.Click
 
+        ToolStrip1.Enabled = False
+
+        Dim gridCategorias As New CategoriasGrid
+
+        gridCategorias.MdiParent = Me
+
+        gridCategorias.Show()
+
+
+    End Sub
     Private Sub Salir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Salir.Click
 
         End
 
     End Sub
 
+  
 End Class

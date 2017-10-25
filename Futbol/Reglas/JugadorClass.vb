@@ -2,7 +2,7 @@
 
 Public Class JugadorClass
 
-    Private Id_, DNI_, IdEquipo_ As Integer
+    Private Id_, DNI_, IdEquipo_, IdCategoria_ As Integer
 
     Public Property Id() As Integer
         Get
@@ -43,7 +43,20 @@ Public Class JugadorClass
         End Set
     End Property
 
-    Private Nombre_, DetalleEq_ As String
+
+    Public Property IdCategoria() As Integer
+        Get
+
+            Return IdCategoria_
+
+        End Get
+        Set(ByVal value As Integer)
+
+            IdCategoria_ = value
+
+        End Set
+    End Property
+    Private Nombre_, DetalleEq_, DetalleCat_ As String
 
     Public Property Nombre() As String
         Get
@@ -68,6 +81,25 @@ Public Class JugadorClass
             Next
 
             Return DetalleEq_
+
+        End Get
+
+
+    End Property
+    Public ReadOnly Property DetalleCat() As String
+        Get
+
+            For Each categoria In categorias_list
+
+                If categoria.Id = IdCategoria_ Then
+
+                    DetalleCat_ = categoria.categoria
+
+
+                End If
+            Next
+
+            Return DetalleCat_
 
         End Get
 

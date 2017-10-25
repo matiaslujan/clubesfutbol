@@ -35,6 +35,8 @@ Partial Class JugadorForm
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label1 = New System.Windows.Forms.Label
         Me.LabelFecha = New System.Windows.Forms.Label
+        Me.Label6 = New System.Windows.Forms.Label
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox
         Me.SuspendLayout()
         '
         'Cancelar
@@ -42,7 +44,7 @@ Partial Class JugadorForm
         Me.Cancelar.BackColor = System.Drawing.Color.LimeGreen
         Me.Cancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Cancelar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Cancelar.Location = New System.Drawing.Point(242, 228)
+        Me.Cancelar.Location = New System.Drawing.Point(242, 264)
         Me.Cancelar.Name = "Cancelar"
         Me.Cancelar.Size = New System.Drawing.Size(83, 32)
         Me.Cancelar.TabIndex = 5
@@ -54,7 +56,7 @@ Partial Class JugadorForm
         Me.Aceptar.BackColor = System.Drawing.Color.LimeGreen
         Me.Aceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Aceptar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Aceptar.Location = New System.Drawing.Point(66, 228)
+        Me.Aceptar.Location = New System.Drawing.Point(51, 264)
         Me.Aceptar.Name = "Aceptar"
         Me.Aceptar.Size = New System.Drawing.Size(83, 32)
         Me.Aceptar.TabIndex = 4
@@ -67,7 +69,7 @@ Partial Class JugadorForm
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(193, 179)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(157, 23)
+        Me.ComboBox1.Size = New System.Drawing.Size(198, 23)
         Me.ComboBox1.TabIndex = 3
         '
         'TextBox4
@@ -172,13 +174,35 @@ Partial Class JugadorForm
         Me.LabelFecha.Text = "Label6"
         Me.LabelFecha.Visible = False
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(32, 213)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(76, 16)
+        Me.Label6.TabIndex = 25
+        Me.Label6.Text = "Categoria"
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(193, 213)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(198, 23)
+        Me.ComboBox2.TabIndex = 26
+        '
         'JugadorForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Futbol.My.Resources.Resources.jugador1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(389, 272)
+        Me.ClientSize = New System.Drawing.Size(518, 335)
+        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.LabelFecha)
         Me.Controls.Add(Me.Cancelar)
         Me.Controls.Add(Me.Aceptar)
@@ -212,4 +236,6 @@ Partial Class JugadorForm
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents LabelFecha As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
 End Class

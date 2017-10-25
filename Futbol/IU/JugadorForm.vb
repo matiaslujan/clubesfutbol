@@ -31,6 +31,18 @@
 
         End Set
     End Property
+    Dim combo2_ As Integer
+
+    Public Property combo2() As Integer
+        Get
+            Return combo2_
+
+        End Get
+        Set(ByVal value As Integer)
+            combo2_ = value
+
+        End Set
+    End Property
 
 
     Private Sub Aceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Aceptar.Click
@@ -50,11 +62,15 @@
 
         MiJugador.IdEquipo = CInt(ComboBox1.SelectedValue)
 
+        MiJugador.IdCategoria = CInt(ComboBox2.SelectedValue)
+
         Select Case operacion_
 
             Case "Agregar"
 
                 If ComboBox1.SelectedIndex = -1 Then Exit Sub
+
+                If ComboBox2.SelectedIndex = -1 Then Exit Sub
 
                 jugadores_list.InsertarJugador(MiJugador)
 
@@ -90,6 +106,15 @@
         ComboBox1.ValueMember = "Id"
 
         ComboBox1.SelectedValue = combo
+
+
+        ComboBox2.DataSource = categorias_list
+
+        ComboBox2.DisplayMember = "Categoria"
+
+        ComboBox2.ValueMember = "Id"
+
+        ComboBox2.SelectedValue = combo2
 
     End Sub
 

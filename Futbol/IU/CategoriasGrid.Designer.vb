@@ -24,14 +24,14 @@ Partial Class CategoriasGrid
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView
         Me.Agregar = New System.Windows.Forms.ToolStripButton
-        Me.Actualizar = New System.Windows.Forms.ToolStripButton
+        Me.Modificar = New System.Windows.Forms.ToolStripButton
         Me.Eliminar = New System.Windows.Forms.ToolStripButton
         Me.Salir = New System.Windows.Forms.ToolStripButton
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.CategoriaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView
         Me.CategoriaClassBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Categoria = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CategoriaClassBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -40,30 +40,12 @@ Partial Class CategoriasGrid
         'ToolStrip1
         '
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(30, 30)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Agregar, Me.Actualizar, Me.Eliminar, Me.Salir})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Agregar, Me.Modificar, Me.Eliminar, Me.Salir})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(520, 37)
         Me.ToolStrip1.TabIndex = 0
         Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.CategoriaDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.CategoriaClassBindingSource
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 37)
-        Me.DataGridView1.MultiSelect = False
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(520, 217)
-        Me.DataGridView1.TabIndex = 1
         '
         'Agregar
         '
@@ -73,13 +55,13 @@ Partial Class CategoriasGrid
         Me.Agregar.Size = New System.Drawing.Size(80, 34)
         Me.Agregar.Text = "Agregar"
         '
-        'Actualizar
+        'Modificar
         '
-        Me.Actualizar.Image = Global.Futbol.My.Resources.Resources.Actualizar__1_
-        Me.Actualizar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Actualizar.Name = "Actualizar"
-        Me.Actualizar.Size = New System.Drawing.Size(88, 34)
-        Me.Actualizar.Text = "Actualizar"
+        Me.Modificar.Image = Global.Futbol.My.Resources.Resources.Actualizar__1_
+        Me.Modificar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Modificar.Name = "Modificar"
+        Me.Modificar.Size = New System.Drawing.Size(84, 34)
+        Me.Modificar.Text = "Modificar"
         '
         'Eliminar
         '
@@ -98,23 +80,42 @@ Partial Class CategoriasGrid
         Me.Salir.Size = New System.Drawing.Size(61, 34)
         Me.Salir.Text = "Salir"
         '
-        'IdDataGridViewTextBoxColumn
+        'DataGridView1
         '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CategoriaDataGridViewTextBoxColumn
-        '
-        Me.CategoriaDataGridViewTextBoxColumn.DataPropertyName = "Categoria"
-        Me.CategoriaDataGridViewTextBoxColumn.HeaderText = "Categoria"
-        Me.CategoriaDataGridViewTextBoxColumn.Name = "CategoriaDataGridViewTextBoxColumn"
-        Me.CategoriaDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.Categoria})
+        Me.DataGridView1.DataSource = Me.CategoriaClassBindingSource
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 37)
+        Me.DataGridView1.MultiSelect = False
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView1.Size = New System.Drawing.Size(520, 217)
+        Me.DataGridView1.TabIndex = 1
         '
         'CategoriaClassBindingSource
         '
         Me.CategoriaClassBindingSource.DataSource = GetType(Futbol.CategoriaClass)
+        '
+        'Id
+        '
+        Me.Id.DataPropertyName = "Id"
+        Me.Id.HeaderText = "Id"
+        Me.Id.Name = "Id"
+        Me.Id.ReadOnly = True
+        Me.Id.Visible = False
+        '
+        'Categoria
+        '
+        Me.Categoria.DataPropertyName = "Categoria"
+        Me.Categoria.HeaderText = "Categoria"
+        Me.Categoria.Name = "Categoria"
+        Me.Categoria.ReadOnly = True
         '
         'CategoriasGrid
         '
@@ -125,6 +126,7 @@ Partial Class CategoriasGrid
         Me.Controls.Add(Me.ToolStrip1)
         Me.Name = "CategoriasGrid"
         Me.Text = "CategoriasGrid"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -135,11 +137,11 @@ Partial Class CategoriasGrid
     End Sub
     Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
     Friend WithEvents Agregar As System.Windows.Forms.ToolStripButton
-    Friend WithEvents Actualizar As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Modificar As System.Windows.Forms.ToolStripButton
     Friend WithEvents Eliminar As System.Windows.Forms.ToolStripButton
     Friend WithEvents Salir As System.Windows.Forms.ToolStripButton
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents IdDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents CategoriaDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents CategoriaClassBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Id As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Categoria As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

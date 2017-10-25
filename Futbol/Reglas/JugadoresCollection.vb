@@ -62,6 +62,7 @@ Public Class JugadoresCollection
             MiJugador.DNI = CInt(dr("DNI"))
             MiJugador.IdEquipo = CInt(dr("IdEquipo"))
             MiJugador.FechaNac = CDate(Format(CDate(dr("FechaNac")), "dd/MM/yyyy"))
+            MiJugador.IdCategoria = CInt(dr("IdCategoria"))
 
             Me.Add(Mijugador)
 
@@ -71,18 +72,19 @@ Public Class JugadoresCollection
 
     End Function
 
-    Public Function TraerJugadores(ByVal IdEquipo As Integer) As JugadoresCollection
+    Public Function TraerJugadores(ByVal IdEquipo As Integer, ByVal IdCategoria As Integer) As JugadoresCollection
 
         Dim jugadores_filtro As New JugadoresCollection
         'Necesito hacer esto porque no se crea vacio ya que el New carga la lista automaticamente desde la tabla.
         jugadores_filtro.ClearItems()
 
         'En este caso lo cargamos de jugadores_list filtrado
+
         For Each jugador In jugadores_list
 
             'Solamente agrega (Add) el jugador para el equipo indicado indicada en IdEquipo.
 
-            If jugador.IdEquipo = IdEquipo Then
+            If jugador.IdEquipo = IdEquipo And jugador.IdCategoria = IdCategoria Then
 
                 jugadores_filtro.Add(jugador)
 
@@ -106,12 +108,14 @@ Public Class JugadoresCollection
         vSQL.Append("(Nombre")
         vSQL.Append(",DNI")
         vSQL.Append(",FechaNac")
-        vSQL.Append(",IdEquipo)")
+        vSQL.Append(",IdEquipo")
+        vSQL.Append(",Idcategoria)")
         vSQL.Append(" VALUES ")
         vSQL.Append("('" & MiJugador.Nombre & "'")
         vSQL.Append(",'" & MiJugador.DNI & "'")
         vSQL.Append(",'" & MiJugador.FechaNac & "'")
-        vSQL.Append(",'" & MiJugador.IdEquipo & "')")
+        vSQL.Append(",'" & MiJugador.IdEquipo & "'")
+        vSQL.Append(",'" & MiJugador.IdCategoria & "')")
 
         MiJugador.Id = objBaseDatos.Insertar(vSQL.ToString)
 
@@ -160,6 +164,8 @@ Public Class JugadoresCollection
         vSQL.Append(",DNI='" & MiJugador.DNI & "'")
         vSQL.Append(",FechaNac='" & MiJugador.FechaNac & "'")
         vSQL.Append(",IdEquipo='" & MiJugador.IdEquipo & "'")
+        vSQL.Append(",IdCategoria='" & MiJugador.IdCategoria & "'")
+
 
         Dim resultado As Boolean
 

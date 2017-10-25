@@ -30,14 +30,17 @@ Partial Class JugadoresGrid
         Me.Salir = New System.Windows.Forms.ToolStripButton
         Me.Filtrar = New System.Windows.Forms.ToolStripButton
         Me.ToolStripComboBox1 = New System.Windows.Forms.ToolStripComboBox
+        Me.ToolStripComboBox2 = New System.Windows.Forms.ToolStripComboBox
         Me.DataGridView1 = New System.Windows.Forms.DataGridView
-        Me.JugadorClassBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.IdCategoria = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.DetalleCat = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.Id = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DNI = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.IdEquipo = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.FechaNac = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.DetalleEq = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.JugadorClassBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.JugadorClassBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -47,10 +50,10 @@ Partial Class JugadoresGrid
         '
         Me.ToolStrip1.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(30, 30)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Agregar, Me.Modificar, Me.Eliminar, Me.Salir, Me.Filtrar, Me.ToolStripComboBox1})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Agregar, Me.Modificar, Me.Eliminar, Me.Salir, Me.Filtrar, Me.ToolStripComboBox1, Me.ToolStripComboBox2})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(536, 37)
+        Me.ToolStrip1.Size = New System.Drawing.Size(647, 37)
         Me.ToolStrip1.TabIndex = 0
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -99,7 +102,13 @@ Partial Class JugadoresGrid
         '
         Me.ToolStripComboBox1.BackColor = System.Drawing.SystemColors.Menu
         Me.ToolStripComboBox1.Name = "ToolStripComboBox1"
-        Me.ToolStripComboBox1.Size = New System.Drawing.Size(121, 37)
+        Me.ToolStripComboBox1.Size = New System.Drawing.Size(225, 37)
+        '
+        'ToolStripComboBox2
+        '
+        Me.ToolStripComboBox2.BackColor = System.Drawing.SystemColors.Menu
+        Me.ToolStripComboBox2.Name = "ToolStripComboBox2"
+        Me.ToolStripComboBox2.Size = New System.Drawing.Size(121, 21)
         '
         'DataGridView1
         '
@@ -108,7 +117,7 @@ Partial Class JugadoresGrid
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.DNI, Me.IdEquipo, Me.Nombre, Me.FechaNac, Me.DetalleEq})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.IdCategoria, Me.DNI, Me.IdEquipo, Me.Nombre, Me.FechaNac, Me.DetalleEq, Me.DetalleCat})
         Me.DataGridView1.DataSource = Me.JugadorClassBindingSource
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(0, 37)
@@ -116,12 +125,23 @@ Partial Class JugadoresGrid
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(536, 240)
+        Me.DataGridView1.Size = New System.Drawing.Size(647, 239)
         Me.DataGridView1.TabIndex = 1
         '
-        'JugadorClassBindingSource
+        'IdCategoria
         '
-        Me.JugadorClassBindingSource.DataSource = GetType(Futbol.JugadorClass)
+        Me.IdCategoria.DataPropertyName = "IdCategoria"
+        Me.IdCategoria.HeaderText = "IdCategoria"
+        Me.IdCategoria.Name = "IdCategoria"
+        Me.IdCategoria.ReadOnly = True
+        Me.IdCategoria.Visible = False
+        '
+        'DetalleCat
+        '
+        Me.DetalleCat.DataPropertyName = "DetalleCat"
+        Me.DetalleCat.HeaderText = "DetalleCat"
+        Me.DetalleCat.Name = "DetalleCat"
+        Me.DetalleCat.ReadOnly = True
         '
         'Id
         '
@@ -167,11 +187,15 @@ Partial Class JugadoresGrid
         Me.DetalleEq.Name = "DetalleEq"
         Me.DetalleEq.ReadOnly = True
         '
+        'JugadorClassBindingSource
+        '
+        Me.JugadorClassBindingSource.DataSource = GetType(Futbol.JugadorClass)
+        '
         'JugadoresGrid
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(536, 277)
+        Me.ClientSize = New System.Drawing.Size(647, 276)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Name = "JugadoresGrid"
@@ -194,10 +218,13 @@ Partial Class JugadoresGrid
     Friend WithEvents Filtrar As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripComboBox1 As System.Windows.Forms.ToolStripComboBox
     Friend WithEvents JugadorClassBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents ToolStripComboBox2 As System.Windows.Forms.ToolStripComboBox
     Friend WithEvents Id As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents IdCategoria As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DNI As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents IdEquipo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Nombre As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents FechaNac As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DetalleEq As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DetalleCat As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
