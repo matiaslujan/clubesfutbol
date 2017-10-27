@@ -1,40 +1,5 @@
 ﻿Module Funciones
 
-
-    Public Function validarTeclaFecha(ByVal tecla As Char, ByVal textbox As TextBox) As Boolean
-
-        If Not (Char.IsNumber(tecla) Or Char.IsControl(tecla) Or tecla = "/" Or tecla = "," Or tecla = "." Or tecla = "-" Or tecla = Chr(8)) Then
-
-            Return False
-
-        End If
-
-        Dim pos As Integer = TextBox.SelectionStart
-
-        If (pos = 2 Or pos = 5) And (tecla = "." Or tecla = "," Or tecla = "-") Then
-
-            SendKeys.Send("/")
-
-            Return True
-
-        End If
-
-        If tecla = "/" And pos <> 2 And pos <> 5 Then
-
-            Return False
-
-        End If
-
-        If Char.IsNumber(tecla) And (pos = 2 Or pos = 5) Then
-
-            Return False
-
-        End If
-
-        Return True
-
-    End Function
-
     Public Function validarFecha(ByVal Fecha As String) As Boolean
 
         Dim fec() As String
@@ -107,4 +72,5 @@
         Return True
 
     End Function
+
 End Module
