@@ -5,11 +5,13 @@ Public Class JugadorClass
     Private Id_, DNI_, IdEquipo_, IdCategoria_ As Integer
 
     Public Property Id() As Integer
+
         Get
 
             Return Id_
 
         End Get
+
         Set(ByVal value As Integer)
 
             Id_ = value
@@ -23,11 +25,13 @@ Public Class JugadorClass
             Return DNI_
 
         End Get
+
         Set(ByVal value As Integer)
 
             DNI_ = value
 
         End Set
+
     End Property
 
     Public Property IdEquipo() As Integer
