@@ -77,11 +77,12 @@ Partial Class MenuForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.BackgroundImage = Global.Futbol.My.Resources.Resources.futboll
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(839, 537)
         Me.Controls.Add(Me.ToolStrip1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.IsMdiContainer = True
         Me.Name = "MenuForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

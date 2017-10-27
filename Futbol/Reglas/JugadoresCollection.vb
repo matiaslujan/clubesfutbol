@@ -120,7 +120,7 @@ Public Class JugadoresCollection
         MiJugador.Id = objBaseDatos.Insertar(vSQL.ToString)
 
         If MiJugador.Id = 0 Then
-            MsgBox("No fue posible agregarel jugador " + MiJugador.Nombre)
+            MsgBox("No fue posible agregar al jugador " + MiJugador.Nombre)
             Exit Sub
         End If
 
@@ -140,7 +140,7 @@ Public Class JugadoresCollection
         resultado = objBaseDatos.Eliminar(MiJugador.Id)
 
         If Not resultado Then
-            MessageBox.Show("No fue posible eliminar l jugador " + MiJugador.Nombre)
+            MessageBox.Show("No fue posible eliminar al jugador " + MiJugador.Nombre)
             Exit Sub
         End If
 
