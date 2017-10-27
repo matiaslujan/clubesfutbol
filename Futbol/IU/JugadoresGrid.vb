@@ -1,27 +1,34 @@
 ﻿Public Class JugadoresGrid
 
     Private Sub JugadoresGrid_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
+        'al cargar la grilla se muestran todos los jugadores sin filtrar
         DataGridView1.DataSource = jugadores_list
 
-        'Fuente de datos la coleccion carreras_list.
+
+        'Fuente de datos la coleccion equipos_list.
         ToolStripComboBox1.ComboBox.DataSource = equipos_list
-        'El miembro a mostrar de la lista es Carrera.
+
+        'El miembro a mostrar de la lista es el nombre del equipo.
         ToolStripComboBox1.ComboBox.DisplayMember = "Nombre"
+
         'El miembro de valor es siempre el id.
         ToolStripComboBox1.ComboBox.ValueMember = "Id"
+
         'Como no tenemos que valor seleccionar dejo el primero.
-        ToolStripComboBox1.ComboBox.SelectedValue = 1
+        ToolStripComboBox1.ComboBox.SelectedValue = 0
 
 
-        'Fuente de datos la coleccion carreras_list.
+        'Fuente de datos la coleccion categorias_list.
         ToolStripComboBox2.ComboBox.DataSource = categorias_list
-        'El miembro a mostrar de la lista es Carrera.
+
+        'El miembro a mostrar de la lista es la categoria.
         ToolStripComboBox2.ComboBox.DisplayMember = "Categoria"
+
         'El miembro de valor es siempre el id.
         ToolStripComboBox2.ComboBox.ValueMember = "Id"
+
         'Como no tenemos que valor seleccionar dejo el primero.
-        ToolStripComboBox2.ComboBox.SelectedValue = 1
+        ToolStripComboBox2.ComboBox.SelectedValue = 0
 
         Me.Text = "Jugadores"
        
@@ -112,14 +119,17 @@
 
     Private Sub Filtrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Filtrar.Click
 
-        'Obtiene el IdCarrera seleccionando en el Combobox1.
+        'Obtiene el Idequipo seleccionando en el Combobox1.
         Dim IdEquipo As Integer = CInt(ToolStripComboBox1.ComboBox.SelectedValue)
+        'Obtiene el Idcategoria seleccionando en el Combobox2.
+
         Dim IdCategoria As Integer = CInt(ToolStripComboBox2.ComboBox.SelectedValue)
 
-        'No pude aplicar filtro al bindingsource asi que lo recargue filtrado de mesas_list.
+        'No pude aplicar filtro al bindingsource asi que lo recargue filtrado de jugadores_list.
         DataGridView1.DataSource = jugadores_list.TraerJugadores(IdEquipo, IdCategoria)
 
-        '    'Quita la seleccion del contenido del Combobox
+        'Quita la seleccion del contenido de los Combobox
+
         ToolStripComboBox1.SelectionLength = 0
 
         ToolStripComboBox2.SelectionLength = 0
