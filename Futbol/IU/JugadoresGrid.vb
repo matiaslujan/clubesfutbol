@@ -135,4 +135,10 @@
         ToolStripComboBox2.SelectionLength = 0
 
     End Sub
+
+    Private Sub JugadoresGrid_Shown(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Shown
+
+        ToolStripComboBox2.ComboBox.SelectedValue = 0
+
+    End Sub
 End Class
